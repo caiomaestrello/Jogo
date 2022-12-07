@@ -1,90 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-widht, initial-scale=1.0">
-<script type="text/javascript" src="script.js"></script>
-<title> Pedra Papel Tesoura </title>
-
-<script>
-
-    var Nome="Caio Maestrello"
-    var RA="6322031"
-    alert(Nome+"  -  "+RA);
-    </script>
-
-
-<script>
-window.onbeforeunload=function(){
-    return "Jogou o jogo?";
-}
-</script>
-
-
-<style>*{
-    
-font-family:Helvetica;
-font-weight: 400;
-}
-</style>
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="var.js"></script>
 </head>
-
 <body>
+    <div id="principal">
+        <h1 id="titulo">Jogo</h1>
+        <div id="placar">
+            <div id="jogador">
+                <h2 id="jogador-nome">Jogador</h2>
+                <span id="jogador-pontos">0</span>
 
+               <ul id="jogador-escolha">
+                <li><a id="jogador-escolha-1" onclick="jogar(1)"><img src="imagens/pedra2.png"></a></li>
+                <li><a id="jogador-escolha-2" onclick="jogar(2)"><img src="imagens/papel2.png"></a></li>
+                <li><a id="jogador-escolha-3" onclick="jogar(3)"><img src="imagens/tesoura2.png"></a></li>
+               </ul>
+            </div>
 
+            <div id="computador">
+                <h2 id="computador-nome">Computador</h2>
+                <span id="computador-pontos">0</span>
 
-    
-<div id="Placar">
-<h1 id="Titulo"> Jogar: Jokenpô</h1>
-</div id="Placar">
-<div id="jogador">
-    <br> 
-    <br> 
-    <h3 id="Placar">Seu Placar:</h3>
-    <span id="jogador-pontos">0</span>
-<br/>
-<br/><br/>
-
-</div>
-
-
-    <button onclick="abrirAlerta()">Iniciar Jogo</button>
-    <input type="tex" id="txtResultado">
-    <script>
-        function abrirAlerta(){
-            alert("Jogo em Manutenção")
-        }
-    </script>
-
-
-
-    <br/>
-    <br/>
-    
-<img src="fotos/pedra1.png" onclick="Escolha1()">
-<img src="fotos/papel1.png"onclick="Escolha2()">
-<img src="fotos/tesoura1.png"onclick="Escolha3()">
-<br/>
-<br/>
-<img src="fotos/pedra2.png"onclick="Escolha4()">
-<img src="fotos/papel2.png"onclick="Escolha5()">
-<img src="fotos/tesoura2.png"onclick="Escolha6()">
-<br/>
-<br/>
-<button onclick="abrirAlerta2()" id="btnResultado"> Mostra</button>
-<script>
-    function abrirAlerta2(){
-        alert("Ja disse que o jogo esta em Manutenção")
-    }
-</script>
-
-
-
+               <ul id="jogador-escolha">
+                <li><a id="computador-escolha-1"><img src="imagens/pedra1.png"></a></li>
+                <li><a id="computador-escolha-2"><img src="imagens/papel1.png"></a></li>
+                <li><a id="computador-escolha-3"><img src="imagens/tesoura1.png"></a></li>
+               </ul>
+            </div>
+        </div>
+        <div id="mensagens">&nbsp;</div>
+    </div>
 </body>
-
 </html>
